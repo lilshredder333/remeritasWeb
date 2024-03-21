@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+body {
+    background-color: black;
+    align-items: center;
+    display: flex;
+	flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+}
+
+/* carrousel automatico header */
+
+/* Animación */
+@keyframes scroll {
+	0% { 
+		position: absolute;
+		bottom: 0;
+	} /* Comienza desde abajo */
+	100% { 
+		position: absolute;
+		bottom: 1000px;
+	 } /* Continúa hacia arriba */
+}
+
+.slider {
+	box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
+	width: 100vw; /* Ancho del carrusel */
+	height: 100vh; /* Altura del carrusel */
+	margin: auto;
+	overflow: hidden;
+	position: relative;
+    display: flex;
+    justify-content: center;
+    animation: scroll 10s linear infinite; /* Ajusta la duración de la animación según sea necesario */
+}
+
+.slide-track {
+	display: flex;
+	flex-direction: column; /* Cambiar la dirección del flexbox a vertical */
+}
+
+.slide {
+    height: auto; /* Altura de cada imagen */
+    width: 100%; /* Ocupa todo el ancho del carrusel */
+}
+
+.slide img{
+	width: 100%;
+}
+
+
+/* navbar */
+
+nav{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	position: absolute;
+	z-index: 1;
+	background-color: black;
+	width: 100%;
+	height: 50px;
+	
+}
+
+nav a{
+	color: white;
+	font-weight: 600;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	transition: all ease 0.4s;
+}
+
+nav a:hover{
+	color: red; 
+	scale: 1.2;
+}
+
+/* navbar secondary pages */
+
+@keyframes moveTop {
+	0%{
+		position: absolute;
+		top: 50%;
+	}
+
+	100%{
+		top: 0;
+	}
+}
+
+#remeritasNav{
+	animation: moveTop 1.5s ease; 
+	animation-fill-mode: both;
+}
+
+#remeritasNav a{
+	color: white;
+	font-weight: 600;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	transition: all ease 0.4s;
+}
+
+
+#remeritasNav a:hover{
+	color: red; 
+	scale: 1.2;
+}
+
+@keyframes fadeIn {
+	0%{
+		opacity: 0;
+		color: red;
+	}
+
+	25%{
+		color: red;
+	}
+	
+	100%{
+		opacity: 1;
+		color: white;
+	}
+}
+
+/* seccion principal */
+
+main{
+	animation: fadeIn 1s ease;
+	animation-fill-mode: both;
+	animation-delay: 0.4s;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	justify-items: center;
+	flex-direction: column;
+	color: white;
+	width: 100vw;
+	height: 100vh;
+	margin-top: 50px; /* altura navbar */
+	margin-bottom: 40px;/* altura footer */
+}
+
+section{
+	width: 50vw;
+	height: auto;
+	text-align: center;
+}
+
+@keyframes fadeInArticle1 {
+	0%{
+		position: absolute;
+		bottom: 0px;
+		right: 20px;
+	}
+
+	100%{
+		bottom: 290px;
+		right: 270px;
+	}
+}
+
+
+@keyframes fadeInArticle2 {
+	0%{
+		position: absolute;
+		bottom: 0px;
+		left: 500px;
+	}
+
+	100%{
+		bottom: 500px;
+		left: 270px;
+	}
+}
+
+
+@keyframes fadeInArticle3 {
+	0%{
+		position: absolute;
+		top: 0px;
+		right: 150px;
+	}
+
+	100%{
+		top: 440px;
+		right: 600px;
+	}
+}
+
+
+
+@keyframes fadeInArticle4 {
+	0%{
+		position: absolute;
+		bottom: 0px;
+		right: 20px;
+	}
+
+	100%{
+		bottom: 290px;
+		right: 270px;
+	}
+}
+
+#article1{
+	animation: fadeInArticle1 2s ease;
+	animation-fill-mode: both;
+	animation-delay: 0.8s;
+	border: solid 2px red;
+	position: absolute;
+}
+
+#article2{
+	animation: fadeInArticle2 2s ease;
+	animation-fill-mode: both;
+	animation-delay: 0.8s;
+	border: solid 2px red;
+	position: absolute;
+}
+
+#article3{
+	animation: fadeInArticle3 2s ease;
+	animation-fill-mode: both;
+	animation-delay: 0.8s;
+	border: solid 2px red;
+	position: absolute;
+}
+
+#article4{
+	animation: fadeInArticle4 2s ease;
+	animation-fill-mode: both;
+	animation-delay: 0.8s;
+	border: solid 2px red;
+	position: absolute;
+}
+
+/* footer */
+footer{
+	position: fixed;
+	bottom: 0;
+	background-color: black;
+	color: white;
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	height: 40px;
+	font-weight: 600;
+	border-top: double 5px white;
+
+}
